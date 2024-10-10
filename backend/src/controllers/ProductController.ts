@@ -10,7 +10,7 @@ export class ProductController {
   }
 
   async getById(req: Request, res: Response) {
-    const product = await this.service.getProductById(Number(req.params.id));
+    const product = await this.service.getProductById(req.params.id);
     res.json(product);
   }
 
@@ -20,12 +20,12 @@ export class ProductController {
   }
 
   async update(req: Request, res: Response) {
-    await this.service.updateProduct(Number(req.params.id), req.body);
+    await this.service.updateProduct(req.params.id, req.body);
     res.status(204).send();
   }
 
   async delete(req: Request, res: Response) {
-    await this.service.deleteProduct(Number(req.params.id));
+    await this.service.deleteProduct(req.params.id);
     res.status(204).send();
   }
 }

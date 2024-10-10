@@ -10,21 +10,20 @@ export class ProductService {
     });
   }
   
-
-  async getProductById(id: number): Promise<Product | null> {
+  async getProductById(id: string): Promise<Product | null> {
     return this.repository.findOne({ where: { id } });
   }
 
   async createProduct(productData: Partial<Product>): Promise<Product> {
-    const product = this.repository.create(productData); 
+    const product = this.repository.create({ ...productData, orders: [] }); 
     return await this.repository.save(product); 
 }
 
-  async updateProduct(id: number, data: Partial<Product>): Promise<void> {
+  async updateProduct(id: string, data: Partial<Product>): Promise<void> {
     await this.repository.update(id, data);
   }
 
-  async deleteProduct(id: number): Promise<void> {
+  async deleteProduct(id: string): Promise<void> {
     await this.repository.delete(id);
   }
 }
