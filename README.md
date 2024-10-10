@@ -1,9 +1,9 @@
 
-# **Nombre de la Aplicación**
+# **Ecommerce Aldemar**
 
 Una breve descripción de lo que hace tu aplicación. Por ejemplo:
 
-> **Nombre de la Aplicación** es una plataforma de gestión de productos y órdenes que permite crear, editar y visualizar productos, además de gestionar pedidos, con un frontend desarrollado en SvelteKit y un backend en Node.js.
+> **Ecommerce Aldemar** es una plataforma de gestión de productos y órdenes que permite crear, editar y visualizar productos, además de gestionar pedidos, con un frontend desarrollado en SvelteKit y un backend en Node.js.
 
 ---
 
