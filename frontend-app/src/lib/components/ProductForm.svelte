@@ -1,21 +1,27 @@
 <script lang="ts">
-  import { fetchProducts } from './../modules/products/productsService';
   import type { Product } from '../../interfaces/Product';
   import { createProduct, editProduct } from './../modules/products/productsService';
+  import { loadProducts } from '../modules/products/productsStore';
   export let currentProduct: Product = { id: '', name: '', price: 0, description: '' };
   export let isEditing = false;
   
   const handleSubmit = async (event: Event) => {
     event.preventDefault();
-    const newProduct = { name: currentProduct.name, price: currentProduct.price, id: currentProduct.id, description: currentProduct.description };
+    const newProduct = { 
+        name: currentProduct.name, 
+        price: currentProduct.price, 
+        id: currentProduct.id || crypto.randomUUID(), 
+        description: currentProduct.description 
+    };
     if (isEditing) {
       await editProduct({ ...newProduct, id: currentProduct.id || '' });
       isEditing = false;
-    } else {
-      await createProduct(newProduct);
-    }
+      return;
+    } 
+    await createProduct(newProduct);
+    isEditing = false;
     resetForm();
-    await fetchProducts(); 
+    await loadProducts(); 
   };
 
   const resetForm = () => {

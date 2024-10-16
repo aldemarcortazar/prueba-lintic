@@ -59,13 +59,6 @@ cd nombre-del-repositorio
    \`\`\`bash
    npm install
    \`\`\`
-3. Configura las variables de entorno creando un archivo \`.env\` en la carpeta \`backend\`. Usa el archivo \`.env.example\` como guía:
-
-   \`\`\`bash
-   cp .env.example .env
-   \`\`\`
-
-4. Llena los campos necesarios en el archivo \`.env\` como la configuración de la base de datos o cualquier API externa que estés utilizando.
 
 ### **Instalación del Frontend**
 1. Dirígete a la carpeta \`frontend\`:
@@ -76,8 +69,11 @@ cd nombre-del-repositorio
    \`\`\`bash
    npm install
    \`\`\`
-
----
+3. Configura las variables de entorno creando un archivo \`.env\` en la carpeta \`frontend\`. Usa el archivo \`.env.example\` como guía:
+   \`\`\`bash
+   cp .env.example .env
+   \`\`\`
+4. Llena los campos necesarios en el archivo \`.env\` copea y pega del archivo \`.env.example\`
 
 ## **Ejecución de la Aplicación**
 
@@ -90,7 +86,7 @@ cd nombre-del-repositorio
    \`\`\`bash
    npm run dev
    \`\`\`
-3. El servidor del backend estará disponible en \`http://localhost:5000\`.
+3. El servidor del backend estará disponible en \`http://localhost:3000\`.
 
 ### **Ejecución del Frontend**
 1. Asegúrate de estar en la carpeta \`frontend\`:
@@ -101,7 +97,7 @@ cd nombre-del-repositorio
    \`\`\`bash
    npm run dev
    \`\`\`
-3. Abre tu navegador y ve a \`http://localhost:3000\` para ver la aplicación en funcionamiento.
+3. Abre tu navegador y ve a \`http://localhost:5173\` para ver la aplicación en funcionamiento.
 
 ---
 

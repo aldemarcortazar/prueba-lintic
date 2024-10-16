@@ -15,6 +15,7 @@ export class ProductService {
   }
 
   async createProduct(productData: Partial<Product>): Promise<Product> {
+    console.log('estoy creando producto: ');
     const product = this.repository.create({ ...productData, orders: [] }); 
     return await this.repository.save(product); 
 }

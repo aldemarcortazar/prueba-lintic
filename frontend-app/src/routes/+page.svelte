@@ -5,5 +5,3 @@
 
 <Navbar></Navbar>
 <ProductList ></ProductList>
-
-<p>Hola</p>

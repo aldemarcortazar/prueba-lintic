@@ -36,6 +36,7 @@ export async function createProduct(product: Product) {
 
 
 export async function editProduct(product: Product) {
+  console.log('edit product');
   try {
     const response = await fetch(`${API_URL}/products/${product.id}`, {
       method: 'PUT',
